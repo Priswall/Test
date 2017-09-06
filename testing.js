@@ -1,4 +1,4 @@
-window.reequestanimationframe(loop);
+window.requestanimationframe(loop);
 var canvas = document.getElementById("canvas");
 canvas.getContext("2d");
 
