@@ -1,6 +1,6 @@
 window.requestAnimationFrame(loop);
 var canvas = document.getElementById("canvas");
-canvas.getContext("2d");
+c = canvas.getContext("2d");
 
 var cats = 0;
 var owneditems = [0,0,0,0,0];
