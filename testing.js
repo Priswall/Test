@@ -1,4 +1,3 @@
-window.requestAnimationFrame(loop);
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 
@@ -25,9 +24,10 @@ function loop(){
 }
 
 function persecond(){
-  for(var i = 0; i < onwneditems.length; i++){
+  for(var i = 0; i < owneditems.length; i++){
     cats+=(owneditems[i]*itemcps[i]);
   }
 }
 
 window.setInterval(persecond,1000);
+window.requestAnimationFrame(loop);
