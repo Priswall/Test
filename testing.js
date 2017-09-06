@@ -20,7 +20,7 @@ function loop(){
     c.font = "20px Arial";
     c.fillText(itemname[i], 400, 230+(75*i));
     c.font = "10px Arial";
-    c.fillText("Owned: "+owneditems[i], 400, 255+(75*i));
+    c.fillText("Owned: "+owneditems[i], 400, 257+(75*i));
   }
   
   c.fillStyle = "black";
