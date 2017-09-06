@@ -9,7 +9,7 @@ var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
 
 c.fillStyle = "black";
-c.fillText("CATS: "+cats);
+c.fillText("CATS: "+cats, 500+(cats*8),50);
 
 function loop(){
   c.fillStyle = "light-blue";
