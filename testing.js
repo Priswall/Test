@@ -42,9 +42,9 @@ function persecond(){
 
 function mouseclicked(e) {
   for( var i = 0; i < owneditems.length; i++ ){
-    if( e.clientY < 250 + ( 75 * i ) && e.clientY > 200 + ( 75 * clientY ) && e.clientX > 400 && e.clientX < 575 ){
-      if( money >= itemprice[i] ){
-        money -= itemprice;
+    if( e.clientY < 250 + ( 75 * i ) && e.clientY > 200 + ( 75 * e.clientY ) && e.clientX > 400 && e.clientX < 575 ){
+      if( cats >= itemprice[i] ){
+        cats -= itemprice;
         itemprice += Math.floor( ( 0.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
       } else {
         //Insert easter egg here
