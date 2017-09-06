@@ -10,6 +10,9 @@ var itemcps = [0.5,5,25,100,500];
 
 
 function loop(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
   c.fillStyle = "lightblue";
   c.fillRect(0,0,640,800);
   
@@ -18,7 +21,7 @@ function loop(){
     c.fillRect(400, 200+(75*i),175,50);
     c.fillStyle = "black";
     c.font = "20px Arial";
-    c.fillText(itemname[i], 400, 230+(75*i));
+    c.fillText(itemname[i], 425, 230+(75*i));
     c.font = "10px Arial";
     c.fillText("Owned: "+owneditems[i], 400, 257+(75*i));
   }
