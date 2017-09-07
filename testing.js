@@ -12,7 +12,7 @@ var itemcps = [0.5,5,25,100,500];
 
 
 function loop(){
-  canvas.width = window.innerWidth * 2;
+  canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   
   c.fillStyle = "lightblue";
