@@ -32,7 +32,7 @@ function loop(){
   c.fillRect( ( canvas.width / 3 ) * 2, 0, canvas.width / 3, canvas.height / 3 );
   
   c.fillStyle = "black";
-  c.fillText( "CATS: " + cats, canvas.width / 2 - ( cats * ( canvas.height / 10 ) ), canvas.height / 10 );
+  c.fillText( "CATS: " + cats, canvas.width / 2, canvas.height / 10 );
   
   window.requestAnimationFrame(loop);
 }                            // End Loop
