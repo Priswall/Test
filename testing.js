@@ -3,7 +3,7 @@ var c = canvas.getContext("2d");
 c.font = "20px Arial";
 
 var cats = 0;
-var clickamount = 0;
+var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var itemprice = [50,500,5000,10000,100000];
@@ -55,6 +55,7 @@ function mouseclicked(e) {
     } else if( e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < canvas.width && e.clientY > 0 && e.clientY < canvas.height / 3 ){
       cats += clickamount;
       clicks++;
+      console.log( "Clicks: " + clicks );
     }
   }
 }
