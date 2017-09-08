@@ -71,8 +71,8 @@ function mousemoved(e) {
   }
 }
 
-window.addEventListener("click",mouseclicked);
-window.addEventListener("mousemove",mousemoved);
+canvas.addEventListener("click",mouseclicked);
+canvas.addEventListener("mousemove",mousemoved);
 
 window.setInterval(persecond,1000);
 window.requestAnimationFrame(loop);
