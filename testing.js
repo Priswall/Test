@@ -47,7 +47,8 @@ function mouseclicked(e) {
   for( var i = 0; i < owneditems.length; i++ ){
     if( e.clientY < ( ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) ) + ( canvas.height / 16 ) && e.clientY > ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) && e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 3 ) - ( canvas.width / 8 ) ){
       if( cats >= itemprice[i] ){
-        cats -= itemprice;
+        cats -= itemprice[i];
+        ownedItems[i]++;
         itemprice += Math.floor( ( 0.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
       } else {
         //Insert easter egg here
