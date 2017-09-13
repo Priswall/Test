@@ -9,6 +9,7 @@ var owneditems = [0,0,0,0,0];
 var itemprice = [50,500,5000,10000,100000];
 var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
+var preventspam = true;
 
 
 function loop(){
@@ -54,11 +55,15 @@ function mouseclicked(e) {
         //Insert easter egg here
       }
     } else if( e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < canvas.width && e.clientY > 0 && e.clientY < canvas.height / 3 ){
-      cats += 1 + clickamount;
-      clicks++;
-      console.log( "Clicks: " + clicks );
+      if(preventspam){
+        cats += 1 + clickamount;
+        clicks++;
+        console.log( "Clicks: " + clicks );
+        preventspam = false;
+      }
     }
   }
+  preventspam = true;
 }
 
 function mousemoved(e) {
