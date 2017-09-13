@@ -50,7 +50,7 @@ function mouseclicked(e) {
       if( cats >= itemprice[i] ){
         cats -= itemprice[i];
         owneditems[i]++;
-        itemprice[i] = Math.floor( 1.4 * itemprice[i] );
+        itemprice[i] = Math.floor( 1.2 * itemprice[i] );
       } else {
         //Insert easter egg here
       }
