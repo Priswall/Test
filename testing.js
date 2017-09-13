@@ -3,7 +3,7 @@ var c = canvas.getContext("2d");
 c.font = "20px Arial";
 
 var cats = 0;
-var clickamount = 1;
+var clickamount = 0;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var itemprice = [50,500,5000,10000,100000];
@@ -49,16 +49,14 @@ function mouseclicked(e) {
       if( cats >= itemprice[i] ){
         cats -= itemprice[i];
         owneditems[i]++;
-        itemprice[i] = Math.floor( ( 0.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
+        itemprice[i] = Math.floor( ( 1.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
       } else {
         //Insert easter egg here
       }
     } else if( e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < canvas.width && e.clientY > 0 && e.clientY < canvas.height / 3 ){
-      do{
-        cats += clickamount;
-        clicks++;
-        console.log( "Clicks: " + clicks );
-      }while(false);
+      cats += 1 + clickamount;
+      clicks++;
+      console.log( "Clicks: " + clicks );
     }
   }
 }
