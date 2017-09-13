@@ -49,14 +49,16 @@ function mouseclicked(e) {
       if( cats >= itemprice[i] ){
         cats -= itemprice[i];
         owneditems[i]++;
-        itemprice += Math.floor( ( 0.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
+        itemprice[i] += Math.floor( ( 0.6 * owneditems[i] ) + ( 0.4 * owneditems[i] ) );
       } else {
         //Insert easter egg here
       }
     } else if( e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < canvas.width && e.clientY > 0 && e.clientY < canvas.height / 3 ){
-      cats += clickamount;
-      clicks++;
-      console.log( "Clicks: " + clicks );
+      do{
+        cats += clickamount;
+        clicks++;
+        console.log( "Clicks: " + clicks );
+      }while(false);
     }
   }
 }
