@@ -107,7 +107,7 @@ var Print = function(){
   this.y = Math.round( Math.random() * canvas.height );
   
   this.show = function(){
-    print.draw(c, this.x, this.y);
+    printt.draw(c, this.x, this.y);
   };
 }
 
