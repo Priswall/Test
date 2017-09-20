@@ -27,8 +27,9 @@ function loop(){
     c.fillStyle = "black";
     c.font = ( canvas.height / 30 ) + "px Arial";
     c.fillText( itemname[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 24 ) )+ ( ( canvas.height / 8 ) * i ) );
-    c.font = ( canvas.height / 40 ) + "px Arial";
+    c.font = ( canvas.height / 20 ) + "px Arial";
     c.fillText( "Owned: " + owneditems[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 12 ) )+ ( ( canvas.height / 8 ) * i ) );
+    c.font = ( canvas.height / 40 ) + "px Arial";
     c.fillText( "Price: " + itemprice[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 9.5 ) )+ ( ( canvas.height / 8 ) * i ) );
   }
   
@@ -66,7 +67,7 @@ function Cat() {
     
     var imd = c.getImageData( 0, 0, 17, 17 );
     for ( var i = 0; i < imd.data.length; i += 4 ){
-      if( imd.data[i] == 255 && imd.data[i+1] == 255 && imd.data[i+2] == 255 ){
+      if( imd.data[i] == 255 && imd.data[i+1] == 0 && imd.data[i+2] == 0 ){
           imd.data[i] = this.newR;
           imd.data[i+1] = this.newG;
           imd.data[i+2] = this.newB;
