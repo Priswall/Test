@@ -153,3 +153,8 @@ canvas.addEventListener( "mousemove", mousemoved );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
+window.setInterval( function(){
+  localStorage.clicks = clicks;
+  localStorage.cats = cats;
+  localStorage.owneditems = owneditems[0] + " " + owneditems[1] + " " + owneditems[2] + " " + owneditems[3] + " " + owneditems[4];
+}, 30000 );
