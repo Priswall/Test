@@ -63,9 +63,9 @@ function Cat() {
     var imd = c.getImageData( 0, 0, 17, 17 );
     for ( var i = 0; i < imageData.data.length; i += 4 ){
       if( imageData.data[i] == 255 && imageData.data[i+1] == 255 && imageData.data[i+2] == 255 ){
-          imageData.data[i]=newR;
-          imageData.data[i+1]=newG;
-          imageData.data[i+2]=newB;
+          imageData.data[i] = this.newR;
+          imageData.data[i+1] = this.newG;
+          imageData.data[i+2] = this.newB;
       }
     }
     c.putImageData(imd,0,0);
@@ -79,7 +79,7 @@ function mouseclicked(e) {
       if( cats >= itemprice[i] ){
         cats -= itemprice[i];
         owneditems[i]++;
-        itemprice[i] = Math.round( itemprice[i] ^ 1.01 );
+        itemprice[i] = Math.round( itemprice[i] * 1.01 );
       } else {
         //Insert easter egg here
       }
@@ -90,7 +90,7 @@ function mouseclicked(e) {
         console.log( "Clicks: " + clicks );
         preventspam = false;
         
-        Cats.push( new Cat() )
+        Cats.push( new Cat() );
         
       }
     }
