@@ -54,7 +54,21 @@ function Cat() {
   this.x = Math.round( Math.random() * ( ( canvas.width / 3 ) *2 ) );
   this.y = Math.round( Math.random() * canvas.height );
   
+  this.newR = Math.round( Math.random() * 255 );
+  this.newG = Math.round( Math.random() * 255 );
+  this.newB = Math.round( Math.random() * 255 );
+  
   this.show = function(){
+    
+    var imd = c.getImageData( 0, 0, this.width, this.height );
+    for ( var i = 0; i < imageData.data.length; i += 4 ){
+      if( imageData.data[i] == 255 && imageData.data[i+1] == 255 && imageData.data[i+2] == 255 ){
+          imageData.data[i]=newR;
+          imageData.data[i+1]=newG;
+          imageData.data[i+2]=newB;
+      }
+    }
+    c.putImageData(imd,0,0);
     cat[0].draw(c, this.x, this.y);
   };
 }
