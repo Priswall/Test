@@ -65,7 +65,8 @@ function Cat() {
   
   this.show = function(){
     
-    var imd = c.getImageData( 0, 0, 17, 17 );
+    var imgd = c.getImageData( 0, 0, 17, 17 );
+    var imd = imgd.data;
     for ( var i = 0; i < imd.data.length; i += 4 ){
       if( imd.data[i] == 255 && imd.data[i+1] == 0 && imd.data[i+2] == 0 ){
           imd.data[i] = this.newR;
@@ -124,8 +125,31 @@ function mousemoved(e) {
   }
 }
 
-canvas.addEventListener("click",mouseclicked);
-canvas.addEventListener("mousemove",mousemoved);
+if( localStorage.cats ){
+  cats = localStorage.cats;
+} else {
+  localStorage.cats = 0;
+}
 
-window.setInterval(persecond,1000);
-window.requestAnimationFrame(loop);
+if( localStorage.clicks ){
+  clicks = Number( localStorage.clicks );
+} else {
+  localStorage.clicks = 0;
+}
+
+if( localStorage.owneditems ){
+  owneditems = localStorage.owneditems.split( ' ' ).map( Number );
+  for( var i = 0; i < owneditems.length; i++ ){
+    for( var j = 0; j < owneditems[j]; j++ ){
+      itemprice[i] = owneditems[i] + 1.1;
+    }
+  }
+} else {
+  localStorage.owneditems = "0 0 0 0 0";
+}
+
+canvas.addEventListener( "click", mouseclicked );
+canvas.addEventListener( "mousemove", mousemoved );
+
+window.setInterval( persecond, 1000 );
+window.requestAnimationFrame( loop );
