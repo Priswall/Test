@@ -143,6 +143,18 @@ if( localStorage.owneditems ){
     for( var j = 0; j < owneditems[j]; j++ ){
       itemprice[i] = owneditems[i] + 1.1;
     }
+    switch ( i ) {
+      case 0:
+        for( var i = 0; i < owneditems[0]; i++ ){
+          Prints.push( new Print() );
+        }
+        break;
+      case 1:
+        for( var i = 0; i < owneditems[1]; i++ ){
+          Cats.push( new Cat() );
+        }
+        break;
+    }
   }
 } else {
   localStorage.owneditems = "0 0 0 0 0";
