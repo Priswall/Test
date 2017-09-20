@@ -60,7 +60,7 @@ function Cat() {
   
   this.show = function(){
     
-    var imd = c.getImageData( 0, 0, this.width, this.height );
+    var imd = c.getImageData( 0, 0, 17, 17 );
     for ( var i = 0; i < imageData.data.length; i += 4 ){
       if( imageData.data[i] == 255 && imageData.data[i+1] == 255 && imageData.data[i+2] == 255 ){
           imageData.data[i]=newR;
