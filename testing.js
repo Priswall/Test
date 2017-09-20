@@ -114,17 +114,6 @@ var Print = function(){
   };
 }
 
-function mousemoved(e) {
-  for( var i = 0; i < owneditems.length; i++ ){
-    if( e.clientY < ( ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) ) + ( canvas.height / 16 ) && e.clientY > ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) && e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 3 ) - ( canvas.width / 8 ) ){
-      canvas.style.cursor = "pointer";
-    } else{
-      canvas.style.cursor = "auto";
-    }
-    
-  }
-}
-
 if( localStorage.cats ){
   cats = localStorage.cats;
   return;
