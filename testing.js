@@ -27,15 +27,15 @@ function loop(){
     c.fillStyle = "black";
     c.font = ( canvas.height / 30 ) + "px Arial";
     c.fillText( itemname[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 24 ) )+ ( ( canvas.height / 8 ) * i ) );
-    c.font = ( canvas.height / 20 ) + "px Arial";
-    c.fillText( "Owned: " + owneditems[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 12 ) )+ ( ( canvas.height / 8 ) * i ) );
     c.font = ( canvas.height / 40 ) + "px Arial";
+    c.fillText( "Owned: " + owneditems[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 12 ) )+ ( ( canvas.height / 8 ) * i ) );
     c.fillText( "Price: " + itemprice[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 9.5 ) )+ ( ( canvas.height / 8 ) * i ) );
   }
   
   c.fillStyle = "rgb( 0, 255, 255 )";
   c.fillRect( ( canvas.width / 3 ) * 2, 0, canvas.width / 3, canvas.height / 3 );
   
+  c.font = ( canvas.height / 20 ) + "px Arial";
   c.fillStyle = "black";
   c.fillText( "CATS: " + cats, canvas.width / 2, canvas.height / 10 );
   
