@@ -127,12 +127,14 @@ function mousemoved(e) {
 
 if( localStorage.cats ){
   cats = localStorage.cats;
+  return;
 } else {
   localStorage.cats = 0;
 }
 
 if( localStorage.clicks ){
   clicks = Number( localStorage.clicks );
+  return;
 } else {
   localStorage.clicks = 0;
 }
@@ -154,6 +156,7 @@ if( localStorage.owneditems ){
           Cats.push( new Cat() );
         }
         break;
+      return;
     }
   }
 } else {
