@@ -1,5 +1,5 @@
 var cat = [],
-    print;
+    printt;
 
 var Sprite = function( img, x, y, w, h ){
   this.img = img;
@@ -21,7 +21,7 @@ function makeSprites( img ){
     new Sprite( img, 27, 0, 17, 17 ),
   ];
   
-  print = new Sprite( img, 52, 0, 11, 9 );
+  printt = new Sprite( img, 52, 0, 11, 9 );
 
 }
 
