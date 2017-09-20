@@ -61,11 +61,11 @@ function Cat() {
   this.show = function(){
     
     var imd = c.getImageData( 0, 0, 17, 17 );
-    for ( var i = 0; i < imageData.data.length; i += 4 ){
-      if( imageData.data[i] == 255 && imageData.data[i+1] == 255 && imageData.data[i+2] == 255 ){
-          imageData.data[i] = this.newR;
-          imageData.data[i+1] = this.newG;
-          imageData.data[i+2] = this.newB;
+    for ( var i = 0; i < imd.data.length; i += 4 ){
+      if( imd.data[i] == 255 && imd.data[i+1] == 255 && imd.data[i+2] == 255 ){
+          imd.data[i] = this.newR;
+          imd.data[i+1] = this.newG;
+          imd.data[i+2] = this.newB;
       }
     }
     c.putImageData(imd,0,0);
