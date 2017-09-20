@@ -84,6 +84,7 @@ function mouseclicked(e) {
         cats -= itemprice[i];
         owneditems[i]++;
         itemprice[i] = Math.round( itemprice[i] * 1.01 );
+        Cats.push( new Cat() );
       } else {
         //Insert easter egg here
       }
