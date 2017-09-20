@@ -1,4 +1,5 @@
-var cat = [];
+var cat = [],
+    print;
 
 var Sprite = function( img, x, y, w, h ){
   this.img = img;
@@ -16,9 +17,11 @@ function makeSprites( img ){
 
   cat = [
     new Sprite( img, 0, 0, 17, 17 ),
-    new Sprite( img, 18, 18, 17, 17 ),
-    new Sprite( img, 27, 27, 17, 17 ),
+    new Sprite( img, 18, 0, 17, 17 ),
+    new Sprite( img, 27, 0, 17, 17 ),
   ];
+  
+  print = new Sprite( img, 52, 0, 11, 9 );
 
 }
 
