@@ -3,7 +3,7 @@ var c = canvas.getContext("2d");
 c.font = "20px Arial";
 
 var cats = 0;
-var clickamount = 0;
+var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var itemprice = [50,500,5000,10000,100000];
@@ -45,6 +45,15 @@ function persecond(){
   }
 }
 
+function Cat() {
+  this.x = Math.round( Math.random() * ( ( canvas.width / 3 ) *2 ) );
+  this.y = Math.round( Math.random() * canvas.height );
+  
+  this.show = function(){
+    c.fillRect(this.x,this.y,50,50);
+  };
+}
+
 function mouseclicked(e) {
   for( var i = 0; i < owneditems.length; i++ ){
     if( e.clientY < ( ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) ) + ( canvas.height / 16 ) && e.clientY > ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) && e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 3 ) - ( canvas.width / 8 ) ){
@@ -57,7 +66,7 @@ function mouseclicked(e) {
       }
     } else if( e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < canvas.width && e.clientY > 0 && e.clientY < canvas.height / 3 ){
       if(preventspam){
-        cats += 1 + clickamount;
+        cats += clickamount;
         clicks++;
         console.log( "Clicks: " + clicks );
         preventspam = false;
@@ -68,7 +77,6 @@ function mouseclicked(e) {
 }
 
 function mousemoved(e) {
-  
   for( var i = 0; i < owneditems.length; i++ ){
     if( e.clientY < ( ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) ) + ( canvas.height / 16 ) && e.clientY > ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) && e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 3 ) - ( canvas.width / 8 ) ){
       canvas.style.cursor = "pointer";
