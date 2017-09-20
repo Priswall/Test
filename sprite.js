@@ -1,6 +1,6 @@
 var cat = [];
 
-var Sprite = ( img, x, y, w, h ){
+var Sprite = function( img, x, y, w, h ){
   this.img = img;
   this.x = x;
   this.y = y;
