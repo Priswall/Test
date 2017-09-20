@@ -6,6 +6,7 @@ var cats = 0;
 var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
+var Cats = [];
 var itemprice = [50,500,5000,10000,100000];
 var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
@@ -36,6 +37,10 @@ function loop(){
   c.fillStyle = "black";
   c.fillText( "CATS: " + cats, canvas.width / 2, canvas.height / 10 );
   
+  for( var i = 0; i < Cats.length; i++ ){
+    Cats[i].show();
+  }
+  
   window.requestAnimationFrame(loop);
 }                            // End Loop
 
@@ -50,7 +55,7 @@ function Cat() {
   this.y = Math.round( Math.random() * canvas.height );
   
   this.show = function(){
-    c.fillRect(this.x,this.y,50,50);
+    cat[0].draw(c, this.x, this.y);
   };
 }
 
@@ -70,6 +75,9 @@ function mouseclicked(e) {
         clicks++;
         console.log( "Clicks: " + clicks );
         preventspam = false;
+        
+        Cats.push( new Cat() )
+        
       }
     }
   }
