@@ -7,6 +7,7 @@ var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var Cats = [];
+var Prints = []
 var itemprice = [50,500,5000,10000,100000];
 var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
@@ -39,6 +40,9 @@ function loop(){
   
   for( var i = 0; i < Cats.length; i++ ){
     Cats[i].show();
+  }
+  for( var i = 0; i < Prints.length; i++ ){
+    Prints[i].show();
   }
   
   window.requestAnimationFrame(loop);
@@ -90,7 +94,7 @@ function mouseclicked(e) {
         console.log( "Clicks: " + clicks );
         preventspam = false;
         
-        Cats.push( new Cat() );
+        Prints.push( new Print() );
         
       }
     }
