@@ -114,7 +114,7 @@ var Print = function(){
   };
 };
 
-if( localStorage.cats ){
+/*if( localStorage.cats ){
   cats = localStorage.cats;
 } else {
   localStorage.cats = 0;
@@ -149,14 +149,14 @@ if( localStorage.owneditems ){
   }
 } else {
   localStorage.owneditems = "0 0 0 0 0";
-}
+}*/
 
 canvas.addEventListener( "click", mouseclicked );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
-window.setInterval( function(){
-  localStorage.clicks = clicks;
-  localStorage.cats = cats;
-  localStorage.owneditems = owneditems[0]+ owneditems[1] + owneditems[2] + owneditems[3] + owneditems[4];
-}, 30000 );
+//window.setInterval( function(){
+//  localStorage.clicks = clicks;
+//  localStorage.cats = cats;
+//  localStorage.owneditems = owneditems[0] + owneditems[1] + owneditems[2] + owneditems[3] + owneditems[4];
+//}, 30000 );
