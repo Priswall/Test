@@ -122,7 +122,6 @@ if( localStorage.cats ){
 
 if( localStorage.clicks ){
   clicks = Number( localStorage.clicks );
-  return;
 } else {
   localStorage.clicks = 0;
 }
