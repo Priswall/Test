@@ -129,7 +129,9 @@ if( localStorage.clicks ){
 }
 
 if( localStorage.owneditems ){
-  owneditems = localStorage.owneditems.split( ' ' ).map( Number );
+  for( var i = 0; i < localStorage.owneditems.length; i++ ){
+      owneditems[i] = localStorage.owneditems[i];
+  }
   for( var i = 0; i < owneditems.length; i++ ){
     for( var j = 0; j < owneditems[j]; j++ ){
       itemprice[i] = owneditems[i] + 1.1;
@@ -160,5 +162,5 @@ window.requestAnimationFrame( loop );
 window.setInterval( function(){
   localStorage.clicks = clicks;
   localStorage.cats = cats;
-  localStorage.owneditems = owneditems[0] + " " + owneditems[1] + " " + owneditems[2] + " " + owneditems[3] + " " + owneditems[4];
+  localStorage.owneditems = owneditems[0]+ owneditems[1] + owneditems[2] + owneditems[3] + owneditems[4];
 }, 30000 );
