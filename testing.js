@@ -152,7 +152,6 @@ if( localStorage.owneditems ){
 }
 
 canvas.addEventListener( "click", mouseclicked );
-canvas.addEventListener( "mousemove", mousemove );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
