@@ -116,7 +116,6 @@ var Print = function(){
 
 if( localStorage.cats ){
   cats = localStorage.cats;
-  return;
 } else {
   localStorage.cats = 0;
 }
@@ -147,7 +146,6 @@ if( localStorage.owneditems ){
           Cats.push( new Cat() );
         }
         break;
-      return;
     }
   }
 } else {
