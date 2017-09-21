@@ -7,7 +7,7 @@ var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var Cats = [];
-var Prints = []
+var Prints = [];
 var itemprice = [50,500,5000,10000,100000];
 var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
@@ -112,7 +112,7 @@ var Print = function(){
   this.show = function(){
     printt.draw(c, this.x, this.y);
   };
-}
+};
 
 if( localStorage.cats ){
   cats = localStorage.cats;
@@ -152,7 +152,7 @@ if( localStorage.owneditems ){
 }
 
 canvas.addEventListener( "click", mouseclicked );
-canvas.addEventListener( "mousemove", mousemoved );
+canvas.addEventListener( "mousemove", mousemove );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
