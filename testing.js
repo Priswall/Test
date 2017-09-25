@@ -74,7 +74,7 @@ function Cat() {
           imd[i+2] = this.newB;
       }
     }
-    c.putImageData(imd,0,0);
+    c.putImageData(imgd,0,0);
     cat[0].draw(c, this.x, this.y);
   };
 }
