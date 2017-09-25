@@ -87,6 +87,9 @@ function mouseclicked(e) {
         owneditems[i]++;
         itemprice[i] = Math.round( itemprice[i] * 1.01 );
         Cats.push( new Cat() );
+        for(var i = 0; i < itemprice[i]; i++){
+          Prints.splice(Prints.length - 1, 1);
+        }
       } else {
         //Insert easter egg here
       }
@@ -114,49 +117,20 @@ var Print = function(){
   };
 };
 
-/*if( localStorage.cats ){
-  cats = localStorage.cats;
-} else {
-  localStorage.cats = 0;
+function save() {
+  prompt("Copy this code and keep it safe to continue your progress:", owneditems[0] + "," + owneditems[1] + "," + owneditems[2] + "," + owneditems[3] + "," + owneditems[4] + "," + itemprice[0] + "," + itemprice[1] + "," + itemprice[2] + "," + itemprice[3] + "," + itemprice[4] );
 }
 
-if( localStorage.clicks ){
-  clicks = Number( localStorage.clicks );
-} else {
-  localStorage.clicks = 0;
+function load(){
+	var j = prompt("Paste your code in the box belox: ");
+	var k = j.split(",");
+  for(var i = 0; i < owneditems.length; i++){
+    owneditems[i] = k[i];
+    itemprice[i] = k[i+5];
+  }
 }
-
-if( localStorage.owneditems ){
-  for( var i = 0; i < localStorage.owneditems.length; i++ ){
-      owneditems[i] = localStorage.owneditems[i];
-  }
-  for( var i = 0; i < owneditems.length; i++ ){
-    for( var j = 0; j < owneditems[j]; j++ ){
-      itemprice[i] = owneditems[i] + 1.1;
-    }
-    switch ( i ) {
-      case 0:
-        for( var i = 0; i < owneditems[0]; i++ ){
-          Prints.push( new Print() );
-        }
-        break;
-      case 1:
-        for( var i = 0; i < owneditems[1]; i++ ){
-          Cats.push( new Cat() );
-        }
-        break;
-    }
-  }
-} else {
-  localStorage.owneditems = "0 0 0 0 0";
-}*/
 
 canvas.addEventListener( "click", mouseclicked );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
-//window.setInterval( function(){
-//  localStorage.clicks = clicks;
-//  localStorage.cats = cats;
-//  localStorage.owneditems = owneditems[0] + owneditems[1] + owneditems[2] + owneditems[3] + owneditems[4];
-//}, 30000 );
