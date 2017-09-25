@@ -3,6 +3,7 @@ var c = canvas.getContext("2d");
 c.font = "20px Arial";
 
 var cats = 0;
+var cps = 0;
 var clickamount = 1;
 var clicks = 0;
 var owneditems = [0,0,0,0,0];
@@ -22,6 +23,7 @@ function loop(){
   c.fillRect( 0, 0, canvas.width, canvas.height );
   
   for( var i = 0; i < owneditems.length; i++ ){
+    cps = itemcps[0] + itemcps[1] + itemcps[2] + itemcps[3] + itemcps[4];
     c.fillStyle = "rgb(0," + ( 100 + ( i * 30 ) ) + "," + ( 100 + ( i * 30 ) ) + ")";
     c.fillRect( ( canvas.width / 3 ) * 2, ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ), ( canvas.width / 3 ) - ( canvas.width / 8 ), canvas.height / 16 );
     c.fillStyle = "black";
@@ -51,7 +53,10 @@ function loop(){
 
 function persecond(){
   for( var i = 0; i < owneditems.length; i++ ){
-    cats+=(owneditems[i]*itemcps[i]);
+    cats += cps;
+    for( var i = 0; i < cps; i++ ){
+       Prints.push( new Print() );
+    }
   }
 }
 
