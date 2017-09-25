@@ -87,7 +87,7 @@ function mouseclicked(e) {
         owneditems[i]++;
         itemprice[i] = Math.round( itemprice[i] * 1.01 );
         Cats.push( new Cat() );
-        for(var i = 0; i < itemprice[i]; i++){
+        for(var j = 0; j < itemprice[i]; j++){
           Prints.splice(Prints.length - 1, 1);
         }
       } else {
