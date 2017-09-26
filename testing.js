@@ -17,10 +17,8 @@ var preventspam = true;
 function checkTotal(){
   
   if(Prints.length >= 100){
-    for(var i = 0; i <= 100; i++){
-	    Prints.splice( 0, 100 );
-	    Cats.push(new Cat);
-    }
+    Prints.splice( 0, 100 );
+    Cats.push(new Cat);
   }
 	
 }
