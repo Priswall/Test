@@ -53,7 +53,7 @@ function loop(){
 
 function persecond(){
   cats += cps;
-  for( var i = 0; i < cps; i++ ){
+  for( var i = 0; i < Math.floor( cps ); i++ ){
      Prints.push( new Print() );
   }
 }
@@ -121,7 +121,7 @@ var Print = function(){
 };
 
 function save() {
-  prompt("Copy this code and keep it safe to continue your progress:", owneditems[0] + "," + owneditems[1] + "," + owneditems[2] + "," + owneditems[3] + "," + owneditems[4] + "," + itemprice[0] + "," + itemprice[1] + "," + itemprice[2] + "," + itemprice[3] + "," + itemprice[4] );
+  prompt("Copy this code and keep it safe to continue your progress:", owneditems[0] + "," + owneditems[1] + "," + owneditems[2] + "," + owneditems[3] + "," + owneditems[4] + "," + itemprice[0] + "," + itemprice[1] + "," + itemprice[2] + "," + itemprice[3] + "," + itemprice[4] + "," + cats);
 }
 
 function load(){
@@ -129,8 +129,9 @@ function load(){
 	var k = j.split(",");
   for(var i = 0; i < owneditems.length; i++){
     owneditems[i] = k[i];
-    itemprice[i] = k[i+5];
+    itemprice[i] = k[i + 5];
   }
+  cats = k[k.length - 1]
 }
 
 canvas.addEventListener( "click", mouseclicked );
