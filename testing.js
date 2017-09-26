@@ -52,11 +52,9 @@ function loop(){
 }                            // End Loop
 
 function persecond(){
-  for( var i = 0; i < owneditems.length; i++ ){
-    cats += cps;
-    for( var i = 0; i < cps; i++ ){
-       Prints.push( new Print() );
-    }
+  cats += cps;
+  for( var i = 0; i < cps; i++ ){
+     Prints.push( new Print() );
   }
 }
 
