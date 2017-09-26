@@ -14,6 +14,18 @@ var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
 var preventspam = true;
 
+function checkTotal(){
+  
+  if(Prints.length >= 100){
+    for(var i = 0; i <= 100; i++){
+      Prints[i].x -= Math.round( Prints[i].x - Prints[0].x );
+    }
+    if(Prints[i].x === Prints[0].x){
+	    Prints.splice( i, 1 );
+    }
+  }
+	
+}
 
 function loop(){
   canvas.width = window.innerWidth;
