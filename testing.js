@@ -60,8 +60,10 @@ function loop(){
     Prints[i].show();
   }
   
+  checkTotal();
+  
   window.requestAnimationFrame(loop);
-}                            // End Loop
+}
 
 function persecond(){
   cats += cps;
@@ -143,7 +145,7 @@ function load(){
     owneditems[i] = k[i];
     itemprice[i] = k[i + 5];
   }
-  cats = k[k.length - 1]
+  cats = k[k.length - 1];
 }
 
 canvas.addEventListener( "click", mouseclicked );
