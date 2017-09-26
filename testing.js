@@ -18,10 +18,8 @@ function checkTotal(){
   
   if(Prints.length >= 100){
     for(var i = 0; i <= 100; i++){
-      Prints[i].x -= Math.round( Prints[i].x - Prints[0].x );
-    }
-    if(Prints[i].x === Prints[0].x){
-	    Prints.splice( i, 1 );
+	    Prints.splice( 0, 100 );
+	    Cats.push(new Cat);
     }
   }
 	
