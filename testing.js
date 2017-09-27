@@ -18,7 +18,7 @@ function checkTotal(){
   
   if(Prints.length >= 100){
     Prints.splice( 0, 100 );
-    Cats.push(new Cat);
+    Cats.push( new Cat() );
   }
 	
 }
@@ -124,9 +124,21 @@ function mouseclicked(e) {
 var Print = function(){
   this.x = Math.round( Math.random() * ( ( canvas.width / 3 ) *2 ) );
   this.y = Math.round( Math.random() * canvas.height );
+  this.showX = this.x;
+  this.showY = this.y;
   
+  this.update  = function(mouseX, mouseY){
+    if( mouseX > this.showX && mouseY > this.showY && mouseX < this.showX + 11 && mouseY < this.showY + 9 ){
+      this.showX = mouseX;
+      this.showY = mouseY;
+    } else {
+      this.showX -= ( this.x - this.showX );
+      this.showY -= ( this.y - this.showY );
+    }
+  };
+	
   this.show = function(){
-    printt.draw(c, this.x, this.y);
+    printt.draw(c, this.showX, this.showY);
   };
 };
 
