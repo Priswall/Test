@@ -165,7 +165,7 @@ function updateloop(e){
 }
 
 canvas.addEventListener( "click", mouseclicked );
-canvas.addEventListener( "mousedown", updateloop );
+canvas.addEventListener( "drag", updateloop );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
