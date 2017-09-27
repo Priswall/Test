@@ -25,6 +25,6 @@ function makeSprites( img ){
 
 }
 
-var img = new Image();
+var img = new DragImage();
 img.onload = function(){ makeSprites( this ) };;
 img.src = "res/cats.png";
