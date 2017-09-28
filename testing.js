@@ -156,16 +156,7 @@ function load(){
   cats = k[k.length - 1];
 }
 
-function updateloop(e){
-  
-  for(var i = 0; i < Prints.length; i++){
-    Prints[i].update(e.clientX, e.clientY);
-  }
-	
-}
-
 canvas.addEventListener( "click", mouseclicked );
-canvas.addEventListener( "drag", updateloop );
 
 window.setInterval( persecond, 1000 );
 window.requestAnimationFrame( loop );
