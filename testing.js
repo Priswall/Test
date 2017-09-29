@@ -79,12 +79,12 @@ function Cat() {
   this.show = function(){
     
     this.imgd = c.getImageData( 0, 0, 17, 17 );
-    this.imd = imgd.data;
-    for ( var i = 0; i < imd.length; i += 4 ){
-      if( imd[i] >= 0 && imd[i+1] <= 0 && imd[i+2] <= 0 ){
-          imd[i] = this.newR;
-          imd[i+1] = this.newG;
-          imd[i+2] = this.newB;
+    this.imd = this.imgd.data;
+    for ( var i = 0; i < this.imd.length; i += 4 ){
+      if( this.imd[i] >= 0 && this.imd[i+1] <= 0 && this.imd[i+2] <= 0 ){
+          this.imd[i] = this.newR;
+          this.imd[i+1] = this.newG;
+          this.imd[i+2] = this.newB;
       }
     }
     c.putImageData(this.imd,0,17);
