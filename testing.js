@@ -81,13 +81,13 @@ function Cat() {
     var imgd = c.getImageData( 0, 0, 17, 17 );
     var imd = imgd.data;
     for ( var i = 0; i < imd.length; i += 4 ){
-      if( imd[i] == 255 && imd[i+1] == 0 && imd[i+2] == 0 ){
+      if( imd[i] >= 0 && imd[i+1] <= 0 && imd[i+2] <= 0 ){
           imd[i] = this.newR;
           imd[i+1] = this.newG;
           imd[i+2] = this.newB;
       }
     }
-    c.putImageData(imgd,0,0);
+    c.putImageData(imd,0,17);
     cat[0].draw(c, this.x, this.y);
   };
 }
