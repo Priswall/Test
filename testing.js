@@ -72,11 +72,11 @@ function Cat() {
   this.x = Math.round( Math.random() * ( ( canvas.width / 3 ) *2 ) );
   this.y = Math.round( Math.random() * canvas.height );
   
-  this.newR = Math.round( Math.random() * 255 );
-  this.newG = Math.round( Math.random() * 255 );
-  this.newB = Math.round( Math.random() * 255 );
-  
   this.show = function(){
+  
+    this.newR = Math.round( Math.random() * 255 );
+    this.newG = Math.round( Math.random() * 255 );
+    this.newB = Math.round( Math.random() * 255 );
     
     this.imageData = c.getImageData( 0, 0, 17, 17 );
     for ( var i = 0; i < this.imageData.length; i += 4 ){
