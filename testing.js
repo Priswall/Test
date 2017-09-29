@@ -87,7 +87,7 @@ function Cat() {
           this.imd[i+2] = this.newB;
       }
     }
-    c.putImageData(this.imd,0,17);
+    c.putImageData(this.imgd,0,17);
     cat[0].draw(c, this.x, this.y);
   };
 }
@@ -110,7 +110,6 @@ function mouseclicked(e) {
       if(preventspam){
         cats += clickamount;
         clicks++;
-        console.log( "Clicks: " + clicks );
         preventspam = false;
         
         Prints.push( new Print() );
