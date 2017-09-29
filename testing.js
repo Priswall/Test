@@ -78,16 +78,15 @@ function Cat() {
   
   this.show = function(){
     
-    this.imgd = c.getImageData( 0, 0, 17, 17 );
-    this.imd = this.imgd.data;
-    for ( var i = 0; i < this.imd.length; i += 4 ){
-      if( this.imd[i] >= 0 && this.imd[i+1] <= 0 && this.imd[i+2] <= 0 ){
-          this.imd[i] = this.newR;
-          this.imd[i+1] = this.newG;
-          this.imd[i+2] = this.newB;
+    this.imageData = c.getImageData( 0, 0, 17, 17 );
+    for ( var i = 0; i < this.imageData.length; i += 4 ){
+      if( this.imageData.data[i] >= 0 && this.imageData.data[i+1] <= 0 && this.imageData.data[i+2] <= 0 ){
+          this.imageData.data[i] = this.newR;
+          this.imageData.data[i+1] = this.newG;
+          this.imageData.data[i+2] = this.newB;
       }
     }
-    c.putImageData(this.imgd,0,17);
+    c.putImageData(this.imageData,0,17);
     cat[0].draw(c, this.x, this.y);
   };
 }
