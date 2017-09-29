@@ -78,8 +78,8 @@ function Cat() {
   
   this.show = function(){
     
-    var imgd = c.getImageData( 0, 0, 17, 17 );
-    var imd = imgd.data;
+    this.imgd = c.getImageData( 0, 0, 17, 17 );
+    this.imd = imgd.data;
     for ( var i = 0; i < imd.length; i += 4 ){
       if( imd[i] >= 0 && imd[i+1] <= 0 && imd[i+2] <= 0 ){
           imd[i] = this.newR;
@@ -87,7 +87,7 @@ function Cat() {
           imd[i+2] = this.newB;
       }
     }
-    c.putImageData(imd,0,17);
+    c.putImageData(this.imd,0,17);
     cat[0].draw(c, this.x, this.y);
   };
 }
