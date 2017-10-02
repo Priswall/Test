@@ -32,15 +32,15 @@ function makeSprites( img ){
   printt = new Sprite( img, 52, 0, 11, 9 );
     
   icons = [
-    new Sprite( img, 36, 17, 10, 10 ),
-    new Sprite( img, 51, 9, 8, 6 ),
-    new Sprite( img, 60, 9, 6, 6 ),
-    new Sprite( img, 46, 17, 5, 5 ),
-    new Sprite( img, 52, 17, 5, 5 ),
-    new Sprite( img, 58, 17, 5, 5 )
+    new Sprite( img, 36, 18, 10, 10 ),
+    new Sprite( img, 51, 10, 8, 6 ),
+    new Sprite( img, 60, 10, 6, 6 ),
+    new Sprite( img, 46, 18, 5, 5 ),
+    new Sprite( img, 52, 18, 5, 5 ),
+    new Sprite( img, 58, 18, 5, 5 )
   ];
 
-  buttton = new Sprite( img, 0, 17, 36, 10 );
+  buttton = new Sprite( img, 0, 18, 36, 10 );
     
 }
 
