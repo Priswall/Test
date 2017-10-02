@@ -33,7 +33,7 @@ function loop(){
   for( var i = 0; i < owneditems.length; i++ ){
     cps = ( itemcps[0] * owneditems[0] ) + ( itemcps[1] * owneditems[1] ) + ( itemcps[2] * owneditems[2] ) + ( itemcps[3] * owneditems[3] ) + ( itemcps[4] * owneditems[4] );
     c.fillStyle = "rgb(0," + ( 100 + ( i * 30 ) ) + "," + ( 100 + ( i * 30 ) ) + ")";
-    c.fillRect( ( canvas.width / 3 ) * 2, ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ), ( canvas.width / 3 ) - ( canvas.width / 8 ), canvas.height / 16 );
+    button.draw( c, ( canvas.width / 3 ) * 2, ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) );
     c.fillStyle = "black";
     c.font = ( canvas.height / 30 ) + "px Arial";
     c.fillText( itemname[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 24 ) )+ ( ( canvas.height / 8 ) * i ) );
