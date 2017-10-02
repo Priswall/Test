@@ -1,6 +1,7 @@
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
 c.font = "20px Arial";
+c.imageSmoothingEnabled = false;
 
 var cats = 0;
 var cps = 0;
