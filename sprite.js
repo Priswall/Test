@@ -13,10 +13,11 @@ var Sprite = function( img, x, y, w, h ){
   this.draw = function(c, x, y, w, h){
     if(w == null){
       c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, this.w, this.h );
-        return
+        return;
     }else{
       c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, w, h );
         return;
+    }
   };
 };
 
@@ -30,15 +31,13 @@ function makeSprites( img ){
   
   printt = new Sprite( img, 52, 0, 11, 9 );
     
-  icons[
-    
+  icons = [
     new Sprite( img, 36, 17, 10, 10 ),
     new Sprite( img, 51, 9, 8, 6 ),
     new Sprite( img, 60, 9, 6, 6 ),
     new Sprite( img, 46, 17, 5, 5 ),
     new Sprite( img, 52, 17, 5, 5 ),
     new Sprite( img, 58, 17, 5, 5 )
-      
   ];
 
   buttton = new Sprite( img, 0, 17, 36, 10 );
@@ -46,5 +45,5 @@ function makeSprites( img ){
 }
 
 var img = new Image();
-img.onload = function(){ makeSprites( this ) };;
+img.onload = function(){ makeSprites( this ); };
 img.src = "res/cats.png";
