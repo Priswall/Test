@@ -44,8 +44,6 @@ function makeSprites( img ){
     
 }
 
-ctxNS.imageSmoothingEnabled = false;
-
 var img = new Image();
 img.onload = function(){ makeSprites( this ); };
 img.src = "res/cats.png";
