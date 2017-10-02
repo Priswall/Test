@@ -10,8 +10,13 @@ var Sprite = function( img, x, y, w, h ){
   this.w = w;
   this.h = h;
   
-  this.draw = function(c, x, y){
-    c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, this.w, this.h );
+  this.draw = function(c, x, y, w, h){
+    if(w == null){
+      c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, this.w, this.h );
+        return
+    }else{
+      c.drawImage( this/img, this.x, this.y, this.w, this.h, x, y, w, h );
+        return;
   };
 };
 
