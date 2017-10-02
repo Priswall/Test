@@ -1,5 +1,7 @@
 var cat = [],
-    printt;
+    printt,
+    button,
+    icons = [];
 
 var Sprite = function( img, x, y, w, h ){
   this.img = img;
@@ -22,7 +24,20 @@ function makeSprites( img ){
   ];
   
   printt = new Sprite( img, 52, 0, 11, 9 );
+    
+  icons[
+    
+    new Sprite( img, 36, 17, 10, 10 );
+    new Sprite( img, 51, 9, 8, 6 );
+    new Sprite( img, 60, 9, 6, 6 );
+    new Sprite( img, 46, 17, 5, 5 );
+    new Sprite( img, 52, 17, 5, 5 );
+    new Sprite( img, 58, 17, 5, 5 );
+      
+  ];
 
+  button = new Sprite( img, 0, 17, 36, 10 );
+    
 }
 
 var img = new Image();
