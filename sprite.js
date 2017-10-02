@@ -15,7 +15,7 @@ var Sprite = function( img, x, y, w, h ){
       c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, this.w, this.h );
         return
     }else{
-      c.drawImage( this/img, this.x, this.y, this.w, this.h, x, y, w, h );
+      c.drawImage( this.img, this.x, this.y, this.w, this.h, x, y, w, h );
         return;
   };
 };
