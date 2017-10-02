@@ -47,3 +47,8 @@ function makeSprites( img ){
 var img = new Image();
 img.onload = function(){ makeSprites( this ); };
 img.src = "res/cats.png";
+
+var script = document.createElement('script');
+script.src = "testing.js";
+script.async = true;
+document.body.appendChild(script);
