@@ -47,7 +47,7 @@ function loop(){
   
   c.font = ( canvas.height / 20 ) + "px Arial";
   c.fillStyle = "black";
-  c.fillText( "CATS: " + cats, canvas.width / 2, canvas.height / 10 );
+  c.fillText( "PAW PRINTS: " + cats, canvas.width / 2, canvas.height / 10 );
   
   for( var i = 0; i < Cats.length; i++ ){
     Cats[i].show();
