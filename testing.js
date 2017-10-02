@@ -32,7 +32,7 @@ function loop(){
   
   for( var i = 0; i < owneditems.length; i++ ){
     cps = ( itemcps[0] * owneditems[0] ) + ( itemcps[1] * owneditems[1] ) + ( itemcps[2] * owneditems[2] ) + ( itemcps[3] * owneditems[3] ) + ( itemcps[4] * owneditems[4] );
-    buttton.draw( c, ( canvas.width / 3 ) * 2, ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) );
+    buttton.draw( c, ( canvas.width / 3 ) * 2, ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ), ( canvas.width / 3 ) - ( canvas.width / 8 ), canvas.height / 16 );
     c.fillStyle = "black";
     c.font = ( canvas.height / 30 ) + "px Arial";
     c.fillText( itemname[i], ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 12 ), ( ( canvas.height / 3 ) + ( canvas.height / 24 ) )+ ( ( canvas.height / 8 ) * i ) );
