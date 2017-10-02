@@ -1,6 +1,6 @@
 var cat = [],
     printt,
-    button,
+    buttton,
     icons = [];
 
 var Sprite = function( img, x, y, w, h ){
@@ -36,7 +36,7 @@ function makeSprites( img ){
       
   ];
 
-  button = new Sprite( img, 0, 17, 36, 10 );
+  buttton = new Sprite( img, 0, 17, 36, 10 );
     
 }
 
