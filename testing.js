@@ -86,7 +86,7 @@ function Cat() {
       }
     }
     c.putImageData(this.imageData,0,17);
-    cat[0].draw(c, this.x, this.y);
+    cat[0].draw(c, this.x, this.y, null);
   };
 }
 
@@ -135,7 +135,7 @@ var Print = function(){
   };
 	
   this.show = function(){
-    printt.draw(c, this.showX, this.showY);
+    printt.draw(c, this.showX, this.showY, null);
   };
 };
 
