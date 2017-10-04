@@ -70,8 +70,9 @@ function persecond(){
   }
 }
 
-function Upgrade( icon, cost, whatToDo ){
+function Upgrade( id, icon, cost, whatToDo ){
 	
+  this.id = id;
   this.icon = icon;
   this.cost = cost;
   this.whatToDo = whatToDo;
@@ -92,7 +93,12 @@ function checkForUpgrade() {
   switch( owneditems[0] ){
 		  
     case 20:
-      upgrades.push( new Upgrade( 3, 1000, function(){itemcps[0] = itemcps[0] * 2;} ) );
+      for( var i = 0; i < upgrades.length; i++){
+        if( upgrades[i].id == 1 ){
+		      upgrades.splice( i, 1 );
+	      }
+      }
+      upgrades.push( new Upgrade( 1, 3, 1000, function(){itemcps[0] = itemcps[0] * 2;} ) );
       break;
 		  
   }
