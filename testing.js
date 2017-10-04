@@ -10,6 +10,7 @@ var clicks = 0;
 var owneditems = [0,0,0,0,0];
 var Cats = [];
 var Prints = [];
+var upgrades = [];
 var itemprice = [50,500,5000,10000,100000];
 var itemname = ["Kitten","Cat","Cat family","Nekomimi","Catman"];
 var itemcps = [0.5,5,25,100,500];
@@ -57,6 +58,7 @@ function loop(){
   }
   
   checkTotal();
+  checkForUpgrade();
   
   window.requestAnimationFrame(loop);
 }
@@ -66,6 +68,42 @@ function persecond(){
   for( var i = 0; i < Math.floor( cps ); i++ ){
      Prints.push( new Print() );
   }
+}
+
+function Upgrade( icon, cost, whatToDo ){
+	
+  this.icon = icon;
+  this.cost = cost;
+  this.whatToDo = whatToDo;
+  this.x = ( canvas.width / 15 ) * ( ( i % 2 ) + 14 );
+  this.y = ( canvas.width / 15 ) * ( Math.floor( i / 2 ) + 4 );
+	
+  this.show = function() {
+  
+    icons[0].show( this.x, this.y, canvas.width / 15, canvas.width / 15 );
+    icons[this.icon].show( this.x, this.y, canvas.width / 15, canvas.width / 15 );
+	  
+  };
+	
+}
+
+function checkForUpgrade() {
+	
+  switch( owneditems[0] ){
+		  
+    case 20:
+      upgrades.push( new Upgrade( 3, 1000, function(){itemcps[0] = itemcps[0] * 2;} ) );
+      break;
+		  
+  }
+	
+  for( var i = 0; i < upgrades.length; i++){
+	  
+    upgrades[i].x = ( canvas.width / 15 ) * ( ( i % 2 ) + 14 );
+    upgrades[i].y = ( canvas.width / 15 ) * ( Math.floor( i / 2 ) + 4 );
+	  
+    upgrades[i].show( upgrades[i].x , upgrades[i].y );
+	
 }
 
 function Cat() {
@@ -117,6 +155,14 @@ function mouseclicked(e) {
     }
   }
   preventspam = true;
+  
+  for(var i = upgrades.length; i < upgrades.length; i++){
+    if(mouseX > upgrades[i].x && mouseX < upgrades[i].x + canvas.width / 15 && mouseY > upgrades[i].y && mouseY < upgrades[i].y + canvas.width / 15 && cats > upgrades[i].cost )
+      upgrades[i].whatToDo();
+      upgrades.splice( i, 1 );
+    }
+  }
+  
 }
 
 var Print = function(){
@@ -145,8 +191,8 @@ function save() {
 }
 
 function load(){
-	var j = prompt("Paste your code in the box belox: ");
-	var k = j.split(",");
+  var j = prompt("Paste your code in the box belox: ");
+  var k = j.split(",");
   for(var i = 0; i < owneditems.length; i++){
     owneditems[i] = k[i];
     itemprice[i] = k[i + 5];
