@@ -103,6 +103,7 @@ function checkForUpgrade() {
     upgrades[i].y = ( canvas.width / 15 ) * ( Math.floor( i / 2 ) + 4 );
 	  
     upgrades[i].show( upgrades[i].x , upgrades[i].y );
+  }
 	
 }
 
@@ -129,7 +130,7 @@ function Cat() {
   };
 }
 
-function mouseclicked(e) {
+var mouseclicked = function (e) {
   for( var i = 0; i < owneditems.length; i++ ){
     if( e.clientY < ( ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) ) + ( canvas.height / 16 ) && e.clientY > ( canvas.height / 3 ) + ( ( canvas.height / 8 ) * i ) && e.clientX > ( canvas.width / 3 ) * 2 && e.clientX < ( ( canvas.width / 3 ) * 2 ) + ( canvas.width / 3 ) - ( canvas.width / 8 ) ){
       if( cats >= itemprice[i] ){
@@ -160,10 +161,8 @@ function mouseclicked(e) {
     if(mouseX > upgrades[i].x && mouseX < upgrades[i].x + canvas.width / 15 && mouseY > upgrades[i].y && mouseY < upgrades[i].y + canvas.width / 15 && cats > upgrades[i].cost )
       upgrades[i].whatToDo();
       upgrades.splice( i, 1 );
-    }
   }
-  
-}
+};
 
 var Print = function(){
   this.x = Math.round( Math.random() * ( ( canvas.width / 3 ) *2 ) );
