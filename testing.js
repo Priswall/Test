@@ -75,8 +75,8 @@ function Upgrade( icon, cost, whatToDo ){
   this.icon = icon;
   this.cost = cost;
   this.whatToDo = whatToDo;
-  this.x = ( canvas.width / 15 ) * ( ( i % 2 ) + 14 );
-  this.y = ( canvas.width / 15 ) * ( Math.floor( i / 2 ) + 4 );
+  this.x = ( canvas.width / 15 ) * 14;
+  this.y = ( canvas.width / 15 ) * 4;
 	
   this.show = function() {
   
