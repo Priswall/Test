@@ -80,8 +80,8 @@ function Upgrade( icon, cost, whatToDo ){
 	
   this.show = function() {
   
-    icons[0].draw( img, this.x, this.y, canvas.width / 15, canvas.width / 15 );
-    icons[this.icon].draw( img, this.x, this.y, canvas.width / 15, canvas.width / 15 );
+    icons[0].draw( c, this.x, this.y, canvas.width / 15, canvas.width / 15 );
+    icons[this.icon].draw( c, this.x, this.y, canvas.width / 15, canvas.width / 15 );
 	  
   };
 	
