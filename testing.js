@@ -81,8 +81,8 @@ function Upgrade( id, icon, cost, whatToDo ){
 	
   this.show = function() {
   
-    icons[0].draw( c, this.x, this.y, canvas.width / 15, canvas.width / 15 );
-    icons[this.icon].draw( c, this.x, this.y, canvas.width / 15, canvas.width / 15 );
+    icons[0].draw( c, this.x, this.y, canvas.height / 15, canvas.height / 15 );
+    icons[this.icon].draw( c, this.x, this.y, canvas.height / 15, canvas.height / 15 );
 	  
   };
 	
@@ -105,8 +105,8 @@ function checkForUpgrade() {
 	
   for( var i = 0; i < upgrades.length; i++){
 	  
-    upgrades[i].x = ( canvas.width / 15 ) * ( ( i % 2 ) + 14 );
-    upgrades[i].y = ( canvas.width / 15 ) * ( Math.floor( i / 2 ) + 4 );
+    upgrades[i].x = ( canvas.height / 15 ) * ( ( i % 2 ) + 13 );
+    upgrades[i].y = ( canvas.height / 15 ) * ( Math.floor( i / 2 ) + 4 );
 	  
     upgrades[i].show( upgrades[i].x , upgrades[i].y );
   }
